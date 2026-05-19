@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
 import CartDrawer from '../components/UI/CartDrawer';
+import ParticleBackground from '../components/UI/ParticleBackground';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MainLayout: React.FC = () => {
@@ -53,6 +54,9 @@ const MainLayout: React.FC = () => {
           }}
         />
       </div>
+
+      {/* Constellation particle network background */}
+      <ParticleBackground />
 
       {/* Global Navigation Header */}
       <Header onCartClick={() => setIsCartOpen(true)} />
