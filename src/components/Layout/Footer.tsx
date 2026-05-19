@@ -66,15 +66,15 @@ const Footer: React.FC = () => {
           <ul className="contact-details">
             <li>
               <MapPin size={16} className="contact-icon" />
-              <span>Gourmet Lane, Sector 62, Noida, UP - 201301</span>
+              <span>Peral A 1502 Lodha Crown Taloja, Navi Mumbai, Maharastra</span>
             </li>
             <li>
               <Phone size={16} className="contact-icon" />
-              <span>+91 98765 43210</span>
+              <span>+91 76749 88775</span>
             </li>
             <li>
               <Mail size={16} className="contact-icon" />
-              <span>order@aapkaapnakitchen.com</span>
+              <span>aapkaapnakitchen@gmail.com</span>
             </li>
           </ul>
         </div>
