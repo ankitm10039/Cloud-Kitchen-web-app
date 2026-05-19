@@ -46,22 +46,22 @@ const Home: React.FC = () => {
     {
       id: 1,
       name: "Rohan Sharma",
-      role: "Tech Lead",
-      content: "The Charcoal Smoked Butter Chicken thali was mind-blowing! True gourmet restaurant quality delivered hot and fast in pristine packaging.",
+      role: "Software Engineer",
+      content: "The Desi Ghee Daal Bati was mind-blowing! Soaked in pure ghee and served hot. Feels exactly like mom's kitchen cooking.",
       rating: 5
     },
     {
       id: 2,
       name: "Ananya Iyer",
-      role: "Fitness Coach",
-      content: "Their Quinoa Harvest Bowl is a daily lunch staple for me. Fresh avocados, perfectly roasted sweet potatoes, and dressing is top notch.",
+      role: "Daily Subscriber",
+      content: "Their Indori Poha is my daily breakfast staple. Light, steam-cooked, and topped with authentic Indori sev. Incredible!",
       rating: 5
     },
     {
       id: 3,
       name: "Vikram Malhotra",
-      role: "Gourmand",
-      content: "Ordered the Ultimate Truffle Burger for dinner. Perfectly cooked double patty, melting gruyère, and that truffle aioli was spectacular.",
+      role: "Traditional Food Lover",
+      content: "Ordered the Pyaj Kachori and Moong Dal Kachori for Sunday breakfast. Perfectly crispy, flaky, and piping hot. Best cloud kitchen!",
       rating: 5
     }
   ];
@@ -78,14 +78,14 @@ const Home: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="hero-badge">⭐ High-Performance Kitchen</span>
-            <h1>Artisan Meals Crafted For Your <span>Cravings</span></h1>
+            <span className="hero-badge">🏡 Ghar Jaisa Swad, Rojana!</span>
+            <h1>Swadist aur Shuddh Khana <span>Apne Kitchen Se</span></h1>
             <p>
-              Experience restaurant-standard culinary creations from our hygiene-certified cloud kitchen, prepared fresh by culinary masters and delivered in under 30 minutes.
+              Ghar ka khana, rojana yhi se managwana! We bring you the authentic taste of home-cooked pure meals prepared with fresh, hygienic ingredients, every single day.
             </p>
             <div className="hero-cta-group">
               <a href="#menu-anchor" className="btn btn-primary">Order Fresh Now</a>
-              <a href="#features-anchor" className="btn btn-secondary">Why CraveCraft?</a>
+              <a href="#features-anchor" className="btn btn-secondary">Our Philosophy</a>
             </div>
           </motion.div>
           
@@ -208,7 +208,7 @@ const Home: React.FC = () => {
           <div className="section-header text-center">
             <span className="section-pre-title">Reviews</span>
             <h2>Loved by Food Enthusiasts</h2>
-            <p className="section-subtitle">Here is what our regular patrons have to say about the CraveCraft experience.</p>
+            <p className="section-subtitle">Here is what our regular patrons have to say about the Aapka Apna Kitchen experience.</p>
           </div>
 
           <div className="testimonials-grid">

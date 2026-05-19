@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
           <div className="logo-icon-wrapper">
             <UtensilsCrossed size={20} className="logo-icon" />
           </div>
-          <span className="brand-name">Crave<span>Craft</span></span>
+          <span className="brand-name">Aapka Apna<span>Kitchen</span></span>
         </Link>
 
         {/* Desktop Navigation */}

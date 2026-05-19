@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
             <div className="logo-icon-wrapper">
               <UtensilsCrossed size={18} className="logo-icon" />
             </div>
-            <span className="brand-name">Crave<span>Craft</span></span>
+            <span className="brand-name">Aapka Apna<span>Kitchen</span></span>
           </Link>
           <p className="footer-desc">
-            A premium, artisan cloud kitchen delivering gourmet dishes crafted by world-class chefs. From wholesome breakfasts to indulgent late-night dinners, we satisfy every crave.
+            Ghar Jaisa Shuddh Aur Swadist Khana - Rojana Apne Kitchen Se! We bring you the authentic taste of home-cooked pure meals prepared with fresh, hygienic ingredients, every single day.
           </p>
           <div className="social-links">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="btn-icon social-btn" aria-label="Instagram">
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Mail size={16} className="contact-icon" />
-              <span>chef@cravecraft.com</span>
+              <span>order@aapkaapnakitchen.com</span>
             </li>
           </ul>
         </div>
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
 
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
-          <p className="copyright">&copy; {new Date().getFullYear()} CraveCraft Cloud Kitchen. All rights reserved.</p>
+          <p className="copyright">&copy; {new Date().getFullYear()} Aapka Apna Kitchen. All rights reserved.</p>
           <div className="legal-links">
             <a href="#privacy">Privacy Policy</a>
             <span className="dot-divider"></span>

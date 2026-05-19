@@ -146,7 +146,7 @@ const OrderTracking: React.FC = () => {
               transition={{ type: 'spring' }}
             >
               <h3>🎉 Your food has arrived!</h3>
-              <p>We hope you enjoy your CraveCraft meals. Rate your experience or start a new order.</p>
+              <p>We hope you enjoy your Aapka Apna Kitchen meals. Rate your experience or start a new order.</p>
               <button 
                 onClick={() => dispatch(clearActiveOrder())} 
                 className="btn btn-secondary clear-tracking-btn"

@@ -10,7 +10,7 @@ const Profile: React.FC = () => {
   
   // Profile Editable Details State
   const [name, setName] = useState('Ankit Meena');
-  const [email, setEmail] = useState('ankit.meena@cravecraft.com');
+  const [email, setEmail] = useState('ankit.meena@aapkaapnakitchen.com');
   const [phone, setPhone] = useState('+91 98765 43210');
   const [isEditing, setIsEditing] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);

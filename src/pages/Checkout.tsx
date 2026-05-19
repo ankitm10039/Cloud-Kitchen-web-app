@@ -15,7 +15,7 @@ const Checkout: React.FC = () => {
   // Form Fields State
   const [fullName, setFullName] = useState('Ankit Meena');
   const [phone, setPhone] = useState('+91 98765 43210');
-  const [email, setEmail] = useState('ankit.meena@cravecraft.com');
+  const [email, setEmail] = useState('ankit.meena@aapkaapnakitchen.com');
   const [street, setStreet] = useState('Flat 402, Sunshine Towers, Sector 62');
   const [city, setCity] = useState('Noida');
   const [pincode, setPincode] = useState('201301');
