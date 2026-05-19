@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Star, Clock, Plus, Check, Flame, Award } from 'lucide-react';
 import { MenuItem } from '../../types';
 import { useCart } from '../../hooks/useCart';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 interface FoodCardProps {
   item: MenuItem;
@@ -36,13 +36,28 @@ const FoodCard: React.FC<FoodCardProps> = ({ item }) => {
     );
   };
 
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 24, scale: 0.98 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: { duration: 0.4, ease: "easeOut" } 
+    }
+  };
+
   return (
     <motion.div 
       className="food-card glass-card"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      whileHover={{ y: -6 }}
+      variants={cardVariants}
+      whileHover={{ 
+        y: -10, 
+        scale: 1.02,
+        boxShadow: "0 20px 40px rgba(245, 158, 11, 0.12)",
+        borderColor: "rgba(245, 158, 11, 0.45)",
+        transition: { duration: 0.2, ease: "easeOut" }
+      }}
+      whileTap={{ scale: 0.98 }}
     >
       <Link to={`/menu/${item.id}`} className="card-link-wrapper">
         {/* Card Image Header */}

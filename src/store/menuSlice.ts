@@ -34,7 +34,7 @@ const initialState: MenuState = {
 
 export const fetchMenu = createAsyncThunk('menu/fetchMenu', async (_, { rejectWithValue }) => {
   try {
-    const response = await axios.get<MenuItem[]>('/api/menu.json');
+    const response = await axios.get<MenuItem[]>(`${import.meta.env.BASE_URL}api/menu.json`);
     return response.data;
   } catch (error: any) {
     return rejectWithValue(error.message || 'Failed to fetch menu items');

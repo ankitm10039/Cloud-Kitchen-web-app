@@ -8,10 +8,8 @@ const Filters: React.FC = () => {
   const categoryFilter = useAppSelector((state) => state.menu.categoryFilter);
   const searchQuery = useAppSelector((state) => state.menu.searchQuery);
 
-  const categories: { id: 'all' | 'veg' | 'nonveg' | 'chef-special'; label: string; icon?: any }[] = [
+  const categories: { id: 'all' | 'chef-special'; label: string; icon?: any }[] = [
     { id: 'all', label: 'All Dishes' },
-    { id: 'veg', label: 'Vegetarian', icon: () => <CircleDot size={14} className="veg-dot-icon" /> },
-    { id: 'nonveg', label: 'Non-Veg', icon: () => <CircleDot size={14} className="nonveg-dot-icon" /> },
     { id: 'chef-special', label: 'Chef Specials', icon: () => <Flame size={14} className="chef-flame-icon" /> },
   ];
 
@@ -24,27 +22,34 @@ const Filters: React.FC = () => {
           type="text"
           value={searchQuery}
           onChange={(e) => dispatch(setSearchQuery(e.target.value))}
-          placeholder="Search for biryani, burgers, healthy bowls..."
+          placeholder="Search for Kachori, Poha, Daal Bati..."
           className="search-input"
         />
       </div>
 
-      {/* Category Pills */}
-      <div className="category-pills">
-        {categories.map((cat) => {
-          const Icon = cat.icon;
-          const isActive = categoryFilter === cat.id;
-          return (
-            <button
-              key={cat.id}
-              onClick={() => dispatch(setCategoryFilter(cat.id))}
-              className={`pill-btn ${isActive ? 'active' : ''}`}
-            >
-              {Icon && <Icon />}
-              <span>{cat.label}</span>
-            </button>
-          );
-        })}
+      {/* Category Pills & Pure Veg Status */}
+      <div className="category-pills-row">
+        <div className="pure-veg-badge-container">
+          <CircleDot size={14} className="veg-dot-icon" />
+          <span>100% PURE VEG</span>
+        </div>
+
+        <div className="category-pills">
+          {categories.map((cat) => {
+            const Icon = cat.icon;
+            const isActive = categoryFilter === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => dispatch(setCategoryFilter(cat.id))}
+                className={`pill-btn ${isActive ? 'active' : ''}`}
+              >
+                {Icon && <Icon />}
+                <span>{cat.label}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <style>{`
@@ -90,6 +95,27 @@ const Filters: React.FC = () => {
           box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
         }
 
+        .category-pills-row {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
+        .pure-veg-badge-container {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          background: rgba(16, 185, 129, 0.08);
+          border: 1px solid rgba(16, 185, 129, 0.25);
+          padding: 10px 18px;
+          border-radius: var(--radius-full);
+          color: #10B981;
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.05em;
+        }
+
         .category-pills {
           display: flex;
           gap: 10px;
@@ -130,11 +156,6 @@ const Filters: React.FC = () => {
           fill: #10B981;
         }
 
-        .nonveg-dot-icon {
-          color: #EF4444;
-          fill: #EF4444;
-        }
-
         .chef-flame-icon {
           color: #F59E0B;
           fill: #F59E0B;
@@ -147,6 +168,10 @@ const Filters: React.FC = () => {
           }
           .search-bar-wrapper {
             max-width: 100%;
+          }
+          .category-pills-row {
+            flex-direction: row;
+            justify-content: space-between;
           }
           .category-pills {
             justify-content: flex-start;

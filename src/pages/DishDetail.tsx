@@ -68,9 +68,7 @@ const DishDetail: React.FC = () => {
     );
   }
 
-  const toppings = dish.category === 'veg' 
-    ? ["Extra Paneer (+₹50)", "Extra Cheese (+₹30)", "Less Oil"]
-    : ["Extra Chicken (+₹60)", "Extra Egg (+₹20)", "Spicy Butter Glaze"];
+  const toppings = ["Extra Paneer (+₹50)", "Extra Ghee (+₹25)", "Extra Cheese (+₹30)", "Less Oil"];
 
   return (
     <div className="dish-detail-page container">
@@ -104,8 +102,8 @@ const DishDetail: React.FC = () => {
         >
           {/* Tags row */}
           <div className="detail-tags-row">
-            <span className={`badge badge-veg-nonveg ${dish.category}`}>
-              {dish.category === 'veg' ? 'VEG' : 'NON-VEG'}
+            <span className="badge badge-veg-nonveg veg">
+              100% PURE VEG
             </span>
             {dish.isChefSpecial && (
               <span className="badge badge-chef">

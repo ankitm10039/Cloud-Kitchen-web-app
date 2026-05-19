@@ -194,11 +194,25 @@ const Home: React.FC = () => {
 
         {/* Menu Cards Grid */}
         {!loading && !error && filteredItems.length > 0 && (
-          <div className="grid-responsive">
+          <motion.div 
+            key={`${selectedTiming}-${categoryFilter}-${searchQuery}`}
+            className="grid-responsive"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.06
+                }
+              }
+            }}
+          >
             {filteredItems.map((item) => (
               <FoodCard key={item.id} item={item} />
             ))}
-          </div>
+          </motion.div>
         )}
       </section>
 
